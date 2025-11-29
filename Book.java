@@ -11,6 +11,7 @@ public class Book {
         this.author = author;
         this.isbn = isbn;
         this.price = price;
+        totalBooksIssued++;
     }
 
     // Default Constructor
@@ -22,12 +23,9 @@ public class Book {
     }
 
     void displayInfo() {
-        System.out.println("------Books Details------\n");
-        System.out.println("Title: " + title + "\n");
-        System.out.println("Auhtor: " + author + "\n");
-        System.out.println("ISBN: " + isbn + "\n");
+        System.out.println("Title: " + title);
+        System.out.println("Auhtor: " + author);
+        System.out.println("ISBN: " + isbn);
         System.out.println("Price: " + price + "\n");
-
-        System.out.println("Total Books Issued: " + totalBooksIssued);
     }
 }
