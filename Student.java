@@ -1,16 +1,35 @@
-class Student extends Person{
-    
+import java.util.ArrayList;
+import java.util.List;
+
+class Student extends Person {
+
+    private List<Book> borrowedBooks;
+
     // Parameterized constructor
-    Student(String name, String email){
+    Student(String name, String email) {
         super(name, email);
+        borrowedBooks = new ArrayList<>();
     }
 
-    // 
+    // Default Constructor
+    Student() {
+        super();
+        borrowedBooks = new ArrayList<>();
+    }
 
     @Override
-    void displayDetails(){
-        System.out.println("------Student Details------\n");
-        System.out.println("Name: " + name + "\n");
+    void displayDetails() {
+        // Personal Info
+        System.out.println("------Student Details------");
+        System.out.println("Name: " + name);
         System.out.println("Email: " + email + "\n");
+
+        // Books info
+        System.out.println("------Borrowed Books------");
+    }
+
+    public void borrowedBooks(Book book) {
+        borrowedBooks.add(book);
+        Book.totalBooksIssued++;
     }
 }
