@@ -27,5 +27,7 @@ public class Book {
         System.out.println("Auhtor: " + author + "\n");
         System.out.println("ISBN: " + isbn + "\n");
         System.out.println("Price: " + price + "\n");
+
+        System.out.println("Total Books Issued: " + totalBooksIssued);
     }
 }

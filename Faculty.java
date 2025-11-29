@@ -26,10 +26,12 @@ class Faculty extends Person {
 
         // Books Info
         System.out.println("------Borrowed Books------");
+        for(Book book: borrowedBooks){
+            book.displayInfo();
+        }
     }
 
     public void borrowedBooks(Book book) {
         borrowedBooks.add(book);
-        Book.totalBooksIssued++;
     }
 }
